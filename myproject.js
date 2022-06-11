@@ -24,3 +24,9 @@
 //     document.getElementById('contents').innerHTML = '';
 // }
 
+function imageClick(event) {
+    event.preventDefault();
+    
+    let imageInput = document.getElementById('image');
+    imageInput.click();
+}

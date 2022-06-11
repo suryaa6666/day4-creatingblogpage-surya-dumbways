@@ -1,4 +1,4 @@
-.contact-container {
+.myproject-container {
   padding: 50px 300px;
   display: flex;
   flex-direction: column;
@@ -6,19 +6,19 @@
   align-items: center;
 }
 
-.contact-container form {
+.myproject-container form {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.contact-container form label {
+.myproject-container form label {
   margin-top: 30px;
   font-size: 20px;
   font-weight: bold;
 }
 
-.contact-container form .contact-input {
+.myproject-container form .myproject-input {
   height: 40px;
   box-shadow: -2px 5px 20px rgba(0, 0, 0, .3);
   border-radius: 5px;
@@ -26,9 +26,21 @@
   margin-top: 10px;
   padding: 0 10px;
   font-size: 20px;
+  background: #FFF;
 }
 
-.contact-container form .contact-message {
+.myproject-container form .myproject-input-image {
+  height: 40px;
+  box-shadow: -2px 5px 20px rgba(0, 0, 0, .3);
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  display: flex;
+  background: #FFF;
+  margin-top: 10px;
+}
+
+.myproject-container form .myproject-description {
   box-shadow: -2px 5px 20px rgba(0, 0, 0, .3);
   border-radius: 5px;
   border: none;
@@ -37,14 +49,14 @@
   font-size: 20px;
 }
 
-.contact-container form .contact-submit {
+.myproject-container form .myproject-submit {
   margin-top: 30px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.contact-container form .contact-submit input {
+.myproject-container form .myproject-submit input {
   color: #FFF;
   background-color: #101726;
   border-radius: 50px;
@@ -53,18 +65,52 @@
   cursor: pointer;
 }
 
-.contact-container form select {
+.myproject-container form select {
   padding: 5px;
 }
 
+.date-container {
+  display: flex;
+}
+
+.date-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.technologies-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.technologies-item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+
+input[type="checkbox"] {
+  box-shadow: -1px 1px 2px rgba(0, 0, 0, .3);
+}
+
 @media only screen and (max-width: 1250px) {
-  .contact-container {
+  .myproject-container {
     padding: 50px 100px;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .myproject-container {
+    padding: 50px 40px;
+  }
+
+  .date-container {
+    flex-direction: column;
   }
 }
 
 @media only screen and (max-width: 720px) {
-  .contact-container {
+  .myproject-container {
     padding: 50px 40px;
   }
 }
