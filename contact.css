@@ -44,6 +44,18 @@
     align-items: center;
 }
 
+.contact-container form .contact-submit input:hover {
+    animation-name: hoverbtn;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.contact-container form .contact-submit input:not(:hover) {
+    animation-name: hoverbtn-reverse;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
 .contact-container form .contact-submit input {
     color: #FFF;
     background-color: #101726;

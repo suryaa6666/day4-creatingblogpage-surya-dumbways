@@ -76,13 +76,13 @@ nav .nav-right a {
 }
 
 nav .nav-right a:hover {
-    animation-name: contact;
+    animation-name: hoverbtn;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
 
 nav .nav-right a:not(:hover) {
-    animation-name: contact-reverse;
+    animation-name: hoverbtn-reverse;
     animation-duration: 0.2s;
     animation-fill-mode: backwards
 }
@@ -106,13 +106,13 @@ nav .nav-right a:not(:hover) {
 }
 
 .contact-btn:hover {
-    animation-name: contact;
+    animation-name: hoverbtn;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
 
 .contact-btn:not(:hover) {
-    animation-name: contact-reverse;
+    animation-name: hoverbtn-reverse;
     animation-duration: 0.2s;
     animation-fill-mode: backwards
 }
@@ -167,7 +167,7 @@ nav .nav-right a:not(:hover) {
     animation-fill-mode: forwards;
 }
 
-.medsos-item:not(:hover) {
+.medsos-item a:not(:hover) {
     animation-name: medsos-reverse;
     animation-duration: 0.2s;
     animation-fill-mode: backwards;
@@ -243,7 +243,7 @@ nav .nav-right a:not(:hover) {
     font-weight: bold;
 }
 
-@keyframes contact {
+@keyframes hoverbtn {
     from {
         background-color: #101726;
     }
@@ -253,7 +253,7 @@ nav .nav-right a:not(:hover) {
     }
 }
 
-@keyframes contact-reverse {
+@keyframes hoverbtn-reverse {
     from {
         background-color: #00A589;
     }
@@ -275,15 +275,13 @@ nav .nav-right a:not(:hover) {
 
 @keyframes medsos-reverse {
     from {
-        color: #101726;
+        color: #00A589;
     }
 
     to {
-        color: #00A589;
+        color: #101726;
     }
 }
-
-
 
 @media only screen and (max-width: 1220px) {
     .flex-container {

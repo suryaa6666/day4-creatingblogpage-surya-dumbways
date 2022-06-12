@@ -44,40 +44,40 @@
     <h1>ADD MY PROJECT</h1>
     <form action="">
       <label for="name">Project Name</label>
-      <input type="text" name="name" id="name" class="myproject-input">
+      <input type="text" name="name" id="name" class="myproject-input" required>
       <div class="date-container">
         <div class="date-item">
           <label for="startdate">Start Date</label>
-          <input type="date" name="startdate id=" startdate" class="myproject-input">
+          <input type="date" name="startdate" id="startdate" class="myproject-input" required>
         </div>
         <div style="width: 30px;">
         </div>
         <div class="date-item">
           <label for="enddate">End Date</label>
-          <input type="date" name="enddate" id="enddate" class="myproject-input">
+          <input type="date" name="enddate" id="enddate" class="myproject-input" required>
         </div>
       </div>
       <label for="description">Description</label>
-      <textarea name="description" id="description" class="myproject-description" rows="5"></textarea>
-      <label for="name">Project Name</label>
+      <textarea name="description" id="description" class="myproject-description" rows="5" required></textarea>
+      <label for="name">Technologies</label>
       <div class="technologies-container">
         <div class="technologies-item">
           <label for="nodejs">
-            <input type="checkbox" name="nodejs" value="nodejs" id="nodejs">
+            <input type="checkbox" name="nodejs" value="nodejs" id="nodejs" onclick="checkboxCheck()">
             <span>Node JS</span>
           </label>
           <label for="reactjs">
-            <input type="checkbox" name="reactjs" value="reactjs" id="reactjs">
+            <input type="checkbox" name="reactjs" value="reactjs" id="reactjs" onclick="checkboxCheck()">
             <span>React JS</span>
           </label>
         </div>
         <div class="technologies-item">
           <label for="nextjs">
-            <input type="checkbox" name="nextjs" value="nextjs" id="nextjs">
+            <input type="checkbox" name="nextjs" value="nextjs" id="nextjs" onclick="checkboxCheck()">
             <span>Next JS</span>
           </label>
           <label for="typescript">
-            <input type="checkbox" name="typescript" value="typescript" id="typescript">
+            <input type="checkbox" name="typescript" value="typescript" id="typescript" onclick="checkboxCheck()">
             <span>TypeScript</span>
           </label>
         </div>
@@ -86,58 +86,26 @@
       <div class="myproject-input-image">
         <div class="myproject-input-image-container" onclick="imageClick(event);">
           <button class="choose-image-btn">choose</button>
+          <small class="myproject-input-image-name" id="myproject-input-image-name"></small>
           <div class="paper-clip-container">
             <i class="fa-solid fa-paperclip" class="paper-clip"></i>
           </div>
         </div>
-        <input type="file" name="image" id="image" class="input-image">
+        <input type="file" accept="image/*" name="image" id="image" class="input-image" required onchange="changeImageFilename();">
       </div>
       <div class="myproject-submit">
-        <input type="button" onclick="submitData()" value="Submit">
+        <input type="button" onclick="submitData(event)" value="Submit">
       </div>
     </form>
   </div>
 
-  <div class="project-container" class="project-container">
+  <div class="project-body">
     <h1>MY PROJECT</h1>
-    <div class="project-card">
-      <img src="assets/anya.jpg" alt="Maaf gambar tidak tersedia">
-      <h3>
-        Dumbways Mobile App - 2022
-        <b class="project-duration">
-          durasi : 3 bulan
-        </b>
-      </h3>
-      <p class="project-description">
-        App that used for dumbways student, it was developed and can be downloaded on playstore, Happy download 😊
-      </p>
-      <div class="project-technologies">
-        <img src="assets/nodejs.png" alt="">
-        <img src="assets/react.png" alt="">
-        <img src="assets/nextjs.png" alt="">
-        <img src="assets/typescript.png" alt="">
-      </div>
-      <div style="display: flex; margin-top: 20px;">
-        <button class="project-button">edit</button>
-        <button class="project-button">delete</button>
-      </div>
+    <div class="project-container" class="project-container" id="project-container">
     </div>
   </div>
   <script src="myproject.js"></script>
   <script src="script.js"></script>
-  <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
-  <!-- For testing purposes, press ctrl+alt+p to use it -->
-  <script type="text/javascript">
-    hotkeys('ctrl+alt+p', function (event, handler) {
-      if (handler.key == "ctrl+alt+p") {
-        document.getElementById("name").value = "John Doe";
-        document.getElementById("email").value = "testing@gmail.com";
-        document.getElementById("phone").value = "08123456789";
-        document.getElementById("subject").value = "Fullstack";
-        document.getElementById("message").value = "Testing Text Area";
-      }
-    });
-  </script>
   <script src="https://kit.fontawesome.com/595039b2d5.js" crossorigin="anonymous"></script>
 </body>
 
