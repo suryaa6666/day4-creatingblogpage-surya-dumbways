@@ -69,8 +69,8 @@ function submitData(event) {
     }
 
     let durasi = dhm((Date.parse(enddate) - Date.parse(startdate)));
-    durasi = Math.floor(durasi / 30) <= 0 ? durasi + ' hari' : Math.floor(durasi / 30) + ' bulan ' + durasi % 30 + ' hari';
-
+    durasi = Math.floor(durasi / 30) <= 0 ? durasi + ' hari' : durasi % 30 == 0 ? Math.floor(durasi / 30) + ' bulan ' : Math.floor(durasi / 30) + ' bulan ' + durasi % 30 + ' hari';
+    
     image = URL.createObjectURL(image[0]);
 
     projectcard += `
