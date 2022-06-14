@@ -22,7 +22,6 @@ function dhm(t) {
         h = 0;
     }
 
-
     return d;
 }
 
@@ -127,5 +126,9 @@ function checkboxCheck() {
 }
 
 function changeImageFilename() {
-    document.getElementById('myproject-input-image-name').innerHTML = document.getElementById('image').files[0].name;
+    if (document.getElementById('image').files.length > 0) {
+        document.getElementById('myproject-input-image-name').innerHTML = document.getElementById('image').files[0].name;
+    } else {
+        document.getElementById('myproject-input-image-name').innerHTML = 'No image selected...';
+    }
 }
